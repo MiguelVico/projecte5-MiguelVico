@@ -8,7 +8,7 @@ Aquesta guia explica com configurar i utilitzar eines per detectar vulnerabilita
 ## **1. Preparació dels entorns virtuals**
 
 ### **Captura 1: VirtualBox amb les màquines virtuals**
-![Llistat de màquines virtuals](/tasca08/img_T06/captura1.png)
+![Llistat de màquines virtuals](/tasca09/img_T09/captura1.png)
 
 Aquí es veu el **Oracle VirtualBox Manager** amb totes les MV que tenim preparades:
 - `metasploitable-linux` (objectiu per escanejar vulnerabilitats)
@@ -21,7 +21,7 @@ Aquest és el punt de partida. Totes les màquines estan aturades. Caldrà engeg
 ---
 
 ### **Captura 2: Configuració de xarxa de Metasploitable**
-![Configuració de xarxa de Metasploitable](/tasca08/img_T06/captura2.png)
+![Configuració de xarxa de Metasploitable](/tasca09/img_T09/captura2.png)
 
 Aquí estem dins dels ajustos de la MV `metasploitable-linux`.  
 A l’apartat **Xarxa → Adaptador 1** veiem:
@@ -34,7 +34,7 @@ Si volem que OpenVAS pugui escanejar Metasploitable, caldrà que estiguin a la m
 ---
 
 ### **Captura 3: Inici de sessió a Metasploitable**
-![Login a Metasploitable](/tasca08/img_T06/captura3.png)
+![Login a Metasploitable](/tasca09/img_T09/captura3.png)
 
 Engeguem la MV `metasploitable-linux` i ens demana credencials:
 - **Usuari:** `msfadmin`
@@ -48,7 +48,7 @@ Aquesta màquina està dissenyada amb vulnerabilitats conegudes per practicar pe
 ---
 
 ### **Captura 4: Sessió iniciada a Metasploitable**
-![Sessió de terminal oberta](/tasca08/img_T06/captura4.png)
+![Sessió de terminal oberta](/tasca09/img_T09/captura4.png)
 
 Un cop dins, veiem el missatge de benvinguda i el prompt:
 ```
@@ -61,7 +61,7 @@ Ja som dins del sistema. Ara podrem executar comandes per explorar la configurac
 ---
 
 ### **Captura 5: Comprovació de la IP amb `ip a`**
-![Execució de ip a](/tasca08/img_T06/captura5.png)
+![Execució de ip a](/tasca09/img_T09/captura5.png)
 
 Executem:
 ```bash
@@ -77,7 +77,7 @@ Aquesta IP (`10.0.2.6`) és de la xarxa NAT de VirtualBox. És accessible des de
 ---
 
 ### **Captura 6: Configuració de xarxa d’OpenVAS**
-![Configuració de xarxa d’OpenVAS](/tasca08/img_T06/captura6.png)
+![Configuració de xarxa d’OpenVAS](/tasca09/img_T09/captura6.png)
 
 Ara entrem als ajustos de la MV **OPENVAS-FREE**:
 - **Xarxa → Adaptador 1:**  
@@ -90,7 +90,7 @@ Amb aquesta configuració, la MV OpenVAS estarà en una xarxa privada només ent
 ---
 
 ### **Captura 7: Inici de Greenbone OS**
-![Login a Greenbone OS](/tasca08/img_T06/captura7.png)
+![Login a Greenbone OS](/tasca09/img_T09/captura7.png)
 
 Engeguem la MV OpenVAS i ens demana login:
 - **Usuari:** `admin`
@@ -107,7 +107,7 @@ Greenbone OS és la distribució que porta OpenVAS/GVM preinstal·lat. Un cop di
 ---
 
 ### **Captura 8: Setup Wizard de Greenbone**
-![Setup Wizard](/tasca08/img_T06/captura8.png)
+![Setup Wizard](/tasca09/img_T09/captura8.png)
 
 Ens apareix un assistent de configuració inicial. Premem **Yes** per completar la configuració.
 
@@ -117,7 +117,7 @@ Aquest assistent ens guiarà per crear un usuari admin, configurar l’actualitz
 ---
 
 ### **Captura 9: Crear usuari admin web**
-![Creació d’usuari admin](/tasca08/img_T06/captura9.png)
+![Creació d’usuari admin](/tasca09/img_T09/captura9.png)
 
 Ens pregunta si volem crear un **global web admin**. Premem **Yes**.
 
@@ -127,7 +127,7 @@ Aquest usuari servirà per accedir a la interfície web de Greenbone. Sense ell 
 ---
 
 ### **Captura 10: Formulari de nou usuari**
-![Formulari nou usuari](/tasca08/img_T06/captura10.png)
+![Formulari nou usuari](/tasca09/img_T09/captura10.png)
 
 Omplim:
 - **Account name:** `usauri` (o el nom que vulguem)
@@ -140,7 +140,7 @@ Aquest usuari tindrà rol d’**Admin**, amb accés complet a totes les funcions
 ---
 
 ### **Captura 11: Clau de subscripció Enterprise Feed**
-![Configuració de feed](/tasca08/img_T06/captura11.png)
+![Configuració de feed](/tasca09/img_T09/captura11.png)
 
 Ens demana una clau de subscripció per al **Greenbone Enterprise Feed**.  
 Tenim dues opcions:
@@ -153,7 +153,7 @@ Per aquesta pràctica podem fer **Skip** i continuar amb el feed comunitari. Tot
 ---
 
 ### **Captura 12: Selfcheck del sistema**
-![Resultat del selfcheck](/tasca08/img_T06/captura12.png)
+![Resultat del selfcheck](/tasca09/img_T09/captura12.png)
 
 Després de la configuració, el sistema fa una auto-comprovació:
 - **Graceful shutdown:** Hi ha hagut un apagat brusc (normal en una MV).
@@ -165,7 +165,7 @@ Aquests són avisos normals en una instal·lació nova. Podrem actualitzar el fe
 ---
 
 ### **Captura 13: Configuració de interfície de xarxa**
-![Elecció d’interfície de xarxa](/tasca08/img_T06/captura13.png)
+![Elecció d’interfície de xarxa](/tasca09/img_T09/captura13.png)
 
 Ens demana configurar una interfície de xarxa. Triem **eth0**.
 
@@ -175,7 +175,7 @@ Cal configurar la xarxa perquè la MV OpenVAS tingui IP accessible des del naveg
 ---
 
 ### **Captura 14: Configuració IPv4 amb DHCP**
-![Configuració eth0](/tasca08/img_T06/captura14.png)
+![Configuració eth0](/tasca09/img_T09/captura14.png)
 
 Veiem la configuració de **eth0**:
 - **IPv4:** enabled
@@ -193,7 +193,7 @@ Ara seguim amb la configuració de xarxa de les MV, l’accés a la interfície 
 
 ## **15. Configuració de la interfície eth1 d’OpenVAS**
 
-![Configuració eth1](/tasca08/img_T06/captura15.png)
+![Configuració eth1](/tasca09/img_T09/captura15.png)
 
 Després de configurar eth0, el sistema també mostra **eth1** amb DHCP activat.  
 Això vol dir que OpenVAS té dues interfícies:
@@ -207,7 +207,7 @@ Dues interfícies poden ser útils per separar tràfic, però per aquesta pràct
 
 ## **16. Adreces IP assignades a OpenVAS**
 
-![IPs d’OpenVAS](/tasca08/img_T06/captura16.png)
+![IPs d’OpenVAS](/tasca09/img_T09/captura16.png)
 
 Aquí veiem les IPs que ha obtingut OpenVAS:
 - **eth0:** `10.0.2.7/24` (xarxa NAT)
@@ -221,7 +221,7 @@ Recordem que Metasploitable té `10.0.2.6`. Com que tots dos estan a la mateixa 
 
 ## **17. Creació d’un nou host a Greenbone**
 
-![Afegir host a Greenbone](/tasca08/img_T06/captura17.png)
+![Afegir host a Greenbone](/tasca09/img_T09/captura17.png)
 
 Dins de la interfície web de Greenbone (accedida des de `http://192.168.56.104`), anem a **Assets → Hosts** i creem un nou host:
 - **IP Address:** `10.0.2.6`
@@ -234,7 +234,7 @@ Estem registrant la màquina objectiu dins de Greenbone per poder-la seleccionar
 
 ## **18. Llistat de hosts a Greenbone**
 
-![Llistat de hosts](/tasca08/img_T06/captura18.png)
+![Llistat de hosts](/tasca09/img_T09/captura18.png)
 
 Veiem el host que hem afegit:
 - **IP:** `10.0.2.6`
@@ -248,7 +248,7 @@ Ara tenim el host registrat i preparat per ser escanejat. El següent pas serà 
 
 ## **19. Creació de credencials SSH**
 
-![Credencials SSH](/tasca08/img_T06/captura19.png)
+![Credencials SSH](/tasca09/img_T09/captura19.png)
 
 Anem a **Configuration → Credentials** i creem una credencial SSH:
 - **Name:** `ssh`
@@ -263,7 +263,7 @@ Amb aquestes credencials, OpenVAS podrà autenticar-se via SSH a Metasploitable 
 
 ## **20. Creació d’un nou target**
 
-![Nou target](/tasca08/img_T06/captura20.png)
+![Nou target](/tasca09/img_T09/captura20.png)
 
 Ara anem a **Configuration → Targets** i creem un nou target:
 - **Manual:** `10.0.2.6`
@@ -277,7 +277,7 @@ Un “target” és el conjunt d’hosts i ports que volem escanejar. Aquí este
 
 ## **21. Creació d’una nova tasca d’escaneig**
 
-![Nova tasca](/tasca08/img_T06/captura21.png)
+![Nova tasca](/tasca09/img_T09/captura21.png)
 
 Anem a **Scans → Tasks** i creem una nova tasca:
 - **Name:** `Vulnerable Linux`
@@ -291,7 +291,7 @@ La tasca és el “treball” que farà OpenVAS: agafa un target, un perfil d’
 
 ## **22. Llistat de tasques (abans de llançar)**
 
-![Llistat de tasques](/tasca08/img_T06/captura22.png)
+![Llistat de tasques](/tasca09/img_T09/captura22.png)
 
 Veiem la tasca creada a la llista. Encara està en estat **N/A** (no executada).
 
@@ -302,7 +302,7 @@ Ara només caldrà prémer el botó de “▶ Start” per començar l’escanei
 
 ## **23. Tasca en execució**
 
-![Tasca en execució](/tasca08/img_T06/captura23.png)
+![Tasca en execució](/tasca09/img_T09/captura23.png)
 
 Un cop iniciada, la tasca canvia d’estat a **Running** i ens mostra un progresse del **38%**.
 
@@ -313,7 +313,7 @@ L’escaneig està en marxa. Greenbone està provant ports, serveis i vulnerabil
 
 ## **24. Tasca completada**
 
-![Tasca completada](/tasca08/img_T06/captura24.png)
+![Tasca completada](/tasca09/img_T09/captura24.png)
 
 Quan l’escaneig acaba, l’estat canvia a **Done** i apareixen resultats classificats per severitat.
 
@@ -324,7 +324,7 @@ Ja tenim resultats! Veiem que hi ha vulnerabilitats de tipus **Critical**. Això
 
 ## **25. Llistat de vulnerabilitats crítiques detectades**
 
-![Vulnerabilitats crítiques](/tasca08/img_T06/captura25.png)
+![Vulnerabilitats crítiques](/tasca09/img_T09/captura25.png)
 
 A la vista de **Results** veiem algunes de les vulnerabilitats trobades:
 - **TWiki < 4.2.4 Multiple XSS / Command Execution**
@@ -342,7 +342,7 @@ Aquestes són vulnerabilitats reals i conegudes que es troben a Metasploitable. 
 
 ## **26. Distribució de resultats per severitat**
 
-![Resultats per severitat](/tasca08/img_T06/captura26.png)
+![Resultats per severitat](/tasca09/img_T09/captura26.png)
 
 El gràfic mostra la distribució de les **177 vulnerabilitats** trobades:
 - **Critical:** La majoria
@@ -356,7 +356,7 @@ Metasploitable és una màquina extremadament vulnerable, això es reflecteix en
 
 ## **27. Informe complet de l’escaneig**
 
-![Informe de l’escaneig](/tasca08/img_T06/captura27.png)
+![Informe de l’escaneig](/tasca09/img_T09/captura27.png)
 
 A l’apartat **Reports** podem veure un resum de l’escaneig:
 - **Hosts escanejats:** 1
@@ -371,7 +371,7 @@ Aquest informe és el “producte final” de la detecció de vulnerabilitats. E
 
 ## **28. Detall d’una vulnerabilitat crítica: Ingresslock backdoor**
 
-![Detall Ingresslock](/tasca08/img_T06/captura28.png)
+![Detall Ingresslock](/tasca09/img_T09/captura28.png)
 
 Si cliquem sobre una vulnerabilitat, per exemple **“Possible Backdoor: Ingresslock”**, veiem:
 - **Port:** 1524/tcp
