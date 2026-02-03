@@ -43,7 +43,7 @@ Aquesta tasca forma part del mòdul de **Seguretat Informàtica** on explorem:
 ```
 tasca09-vulnerabilitats/
 │
-├── img_T06/                          # Captures de pantalla
+├── img_T09/                          # Captures de pantalla
 │   ├── captura1.png                  # VirtualBox amb les MV
 │   ├── captura2.png                  # Configuració xarxa Metasploitable
 │   ├── ...                           # 28 captures en total
@@ -198,9 +198,9 @@ Aquesta guia ha estat desenvolupada com a part del projecte del cicle formatiu d
 Material educatiu - Ús lliure per a finalitats acadèmiques.
 
 ---
-**Realitzat per:** [El teu nom]  
-**Data:** Febrer 2026  
-**Curs:** ASIX - Seguretat Informàtica  
+**Realitzat per:** Miquel Vico  
+**Data:** 3 de Febrer de 2026  
+**Curs:** CFGM2SMXA - Seguretat Informàtica  
 
 > *Recorda: La seguretat no és un producte, és un procés continu.*
 
