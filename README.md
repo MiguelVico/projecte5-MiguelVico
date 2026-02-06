@@ -2,7 +2,7 @@
 
 Aquest és el repositori inicial del **Projecte 5 - La incubadora**.
 
-Nom: [Posa el teu nom aquí]
+Nom: [Miquel Vico]
 
 ![Imatge del projecte](https://images.pexels.com/photos/7376/startup-photos.jpg)
 
